@@ -47,6 +47,8 @@ export interface TimelineItem {
   highlights: string[];
 }
 
+import { getAssetPath } from "@/lib/utils";
+
 export const PERSONAL_INFO = {
   name: "Shubham Acharya",
   title: "AI Backend Developer",
@@ -57,8 +59,8 @@ export const PERSONAL_INFO = {
   email: "shubhamacharya258@gmail.com",
   github: "https://github.com/shubhamacharya77",
   linkedin: "https://www.linkedin.com/in/shubham-acharya-3a5a9b423",
-  profileImage: "/profile_picture.png",
-  resumePdf: "/Shubham_Acharya_Resume.pdf",
+  profileImage: getAssetPath("/profile_picture.png"),
+  resumePdf: getAssetPath("/Shubham_Acharya_Resume.pdf"),
   coreTechStack: [
     "Python",
     "FastAPI",
@@ -197,7 +199,7 @@ export const PROJECTS: Project[] = [
     heroTagline: "Visual AI Workflows & Automated Insight Engine",
     category: "Agentic AI",
     isFeatured: true,
-    image: "/nexus-ai-preview.png",
+    image: getAssetPath("/nexus-ai-preview.png"),
     overview: "Build visual AI workflows that analyze documents, extract insights, and generate reports — all in a single, unified workspace. No code required.",
     problem: "Building custom multi-step AI agent pipelines traditionally required writing complex custom boilerplate Python scripts for state management, tool routing, and streaming output back to the web client.",
     solution: "Designed a modular backend architecture powered by LangGraph state machines and FastAPI. Users construct workflow graphs visually on the frontend, which are converted into stateful executable graphs on the server.",
@@ -279,7 +281,7 @@ async def execute_workflow(payload: WorkflowRunRequest):
     heroTagline: "AI Career Roadmap & Mock Interview Platform",
     category: "RAG & LLMs",
     isFeatured: true,
-    image: "/prepmate-ai-preview.png",
+    image: getAssetPath("/prepmate-ai-preview.png"),
     overview: "Get a personalized career roadmap, discover matched job opportunities, and practice interviews with AI — all in one place.",
     problem: "Generic AI chatbots lack specific context about a candidate's actual projects, code background, or resume structure, leading to generic interview questions.",
     solution: "Engineered a Retrieval-Augmented Generation (RAG) backend. Resumes are parsed into text chunks, embedded via sentence transformers, stored in ChromaDB, and retrieved dynamically during candidate Q&A.",
