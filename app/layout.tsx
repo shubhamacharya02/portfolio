@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Shubham Acharya | AI Backend Developer & Agentic AI Engineer",
   description: "Portfolio of Shubham Acharya, AI Backend Developer specializing in Agentic AI applications, FastAPI, LangGraph workflow orchestration, RAG systems, and production backend architecture.",
   icons: {
-    icon: getAssetPath("/profile_picture.png"),
-    shortcut: getAssetPath("/profile_picture.png"),
-    apple: getAssetPath("/profile_picture.png"),
+    icon: getAssetPath("/favicon.svg"),
+    shortcut: getAssetPath("/favicon.svg"),
+    apple: getAssetPath("/favicon.svg"),
   },
   keywords: [
     "AI Backend Developer",
