@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { getAssetPath } from "@/lib/utils";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -17,6 +18,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Shubham Acharya | AI Backend Developer & Agentic AI Engineer",
   description: "Portfolio of Shubham Acharya, AI Backend Developer specializing in Agentic AI applications, FastAPI, LangGraph workflow orchestration, RAG systems, and production backend architecture.",
+  icons: {
+    icon: getAssetPath("/profile_picture.png"),
+    shortcut: getAssetPath("/profile_picture.png"),
+    apple: getAssetPath("/profile_picture.png"),
+  },
   keywords: [
     "AI Backend Developer",
     "Agentic AI Engineer",
@@ -35,12 +41,21 @@ export const metadata: Metadata = {
     description: "Building Production-Ready AI Backend Systems using Python, FastAPI, LangGraph, and LLMs.",
     type: "website",
     locale: "en_US",
-    siteName: "Shubham Acharya Portfolio"
+    siteName: "Shubham Acharya Portfolio",
+    images: [
+      {
+        url: getAssetPath("/profile_picture.png"),
+        width: 800,
+        height: 800,
+        alt: "Shubham Acharya",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shubham Acharya — AI Backend Developer",
-    description: "Building Agentic AI Applications & Production Backend Systems."
+    description: "Building Agentic AI Applications & Production Backend Systems.",
+    images: [getAssetPath("/profile_picture.png")],
   },
   robots: {
     index: true,
