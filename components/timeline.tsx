@@ -2,7 +2,7 @@
 
 import React from "react";
 import { TIMELINE_JOURNEY } from "@/data/portfolio-data";
-import { Calendar, CheckCircle2, GitCommit } from "lucide-react";
+import { CheckCircle2, GitCommit } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Timeline() {

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { PROJECTS } from "@/data/portfolio-data";
 import { ToastProvider } from "@/components/ui/toast";
 import { CanvasBackground } from "@/components/background/canvas-background";
 import { Navbar } from "@/components/navbar";

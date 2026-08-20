@@ -20,7 +20,7 @@ interface GitHubRepo {
 export function GitHubStats() {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<boolean>(false);
+  const [, setError] = useState<boolean>(false);
 
   const username = PERSONAL_INFO.github.split("/").pop() || "shubhamacharya77";
 
@@ -37,7 +37,7 @@ export function GitHubStats() {
         } else {
           setError(true);
         }
-      } catch (err) {
+      } catch {
         setError(true);
       } finally {
         setLoading(false);

@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shubhamacharya77.github.io/portfolio"),
   title: "Shubham Acharya | AI Backend Developer & Agentic AI Engineer",
   description: "Portfolio of Shubham Acharya, AI Backend Developer specializing in Agentic AI applications, FastAPI, LangGraph workflow orchestration, RAG systems, and production backend architecture.",
   icons: {
