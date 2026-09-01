@@ -22,7 +22,10 @@ export function GitHubStats() {
   const [loading, setLoading] = useState<boolean>(true);
   const [, setError] = useState<boolean>(false);
 
-  const username = PERSONAL_INFO.github.split("/").pop() || "shubhamacharya77";
+  const username =
+    process.env.NEXT_PUBLIC_GITHUB_USERNAME ||
+    PERSONAL_INFO.github.split("/").filter(Boolean).pop() ||
+    "shubhamacharya77";
 
   useEffect(() => {
     async function fetchGitHubData() {

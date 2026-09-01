@@ -17,9 +17,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-zinc-800/60">
           {/* Brand & Status */}
           <div className="flex flex-col gap-1 text-center md:text-left">
-            <span className="font-heading font-bold text-lg text-white">Shubham Acharya</span>
+            <span className="font-heading font-bold text-lg text-white">{PERSONAL_INFO.name}</span>
             <span className="text-xs font-mono text-zinc-400">
-              AI Backend Developer • Agentic AI Engineer
+              {PERSONAL_INFO.title} • Agentic AI Engineer
             </span>
           </div>
 
@@ -45,7 +45,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400">
-          <p>© 2026 Shubham Acharya. Designed & Built with Next.js & Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} {PERSONAL_INFO.name}. Designed & Built with Next.js & Tailwind CSS.</p>
           <div className="flex items-center gap-4 text-zinc-400">
             <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
               <GitHubIcon className="w-4 h-4" />

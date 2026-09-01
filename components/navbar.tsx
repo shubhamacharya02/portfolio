@@ -46,13 +46,18 @@ export function Navbar() {
               className="flex items-center gap-2 group focus:outline-none"
             >
               <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-mono font-bold text-sm group-hover:border-indigo-400 group-hover:bg-indigo-500/20 transition-all">
-                SA
+                {PERSONAL_INFO.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")
+                  .slice(0, 2)
+                  .toUpperCase() || "SA"}
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-sm tracking-tight text-zinc-100 group-hover:text-indigo-300 transition-colors">
-                  Shubham Acharya
+                  {PERSONAL_INFO.name}
                 </span>
-                <span className="text-[10px] text-zinc-400 font-mono">AI Backend Developer</span>
+                <span className="text-[10px] text-zinc-400 font-mono">{PERSONAL_INFO.title}</span>
               </div>
             </Link>
           </div>

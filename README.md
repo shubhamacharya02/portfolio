@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shubham Acharya — AI Backend Developer Portfolio
 
-## Getting Started
+A modern, high-performance portfolio showcasing production-ready AI backend architectures, LangGraph orchestration pipelines, and FastAPI services. Built with Next.js (App Router), TypeScript, and Tailwind CSS.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Getting Started Locally
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Setup environment variables:**
+   A `.env.local` file has been provided for local development. You can also copy from `.env.example`:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Environment Variables & Vercel Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All links, personal information, and project links are parameterized using Next.js `NEXT_PUBLIC_` environment variables with safe default fallbacks.
 
-## Deploy on Vercel
+### Configurable Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Variable | Description | Default Fallback |
+| :--- | :--- | :--- |
+| `NEXT_PUBLIC_SITE_URL` | Base canonical domain (used in sitemap, robots, OG meta) | `https://shubham-acharya.dev` |
+| `NEXT_PUBLIC_NAME` | Developer Full Name | `Shubham Acharya` |
+| `NEXT_PUBLIC_TITLE` | Primary Headline Role | `AI Backend Developer` |
+| `NEXT_PUBLIC_ROLE_HEADLINE` | Recruiter Header Tagline | `Building Production-Ready AI Backend Systems` |
+| `NEXT_PUBLIC_SUBTITLE` | Skills Subtitle | `Agentic AI • LLM Workflows • FastAPI • LangGraph` |
+| `NEXT_PUBLIC_DESCRIPTION` | Hero & OpenGraph Bio Description | *Detailed bio* |
+| `NEXT_PUBLIC_LOCATION` | Location | `Bengaluru, India` |
+| `NEXT_PUBLIC_EMAIL` | Contact Email | `shubhamacharya258@gmail.com` |
+| `NEXT_PUBLIC_GITHUB_URL` | GitHub Profile URL | `https://github.com/shubhamacharya77` |
+| `NEXT_PUBLIC_GITHUB_USERNAME` | GitHub Username (for live API stats) | `shubhamacharya77` |
+| `NEXT_PUBLIC_LINKEDIN_URL` | LinkedIn Profile URL | `https://www.linkedin.com/in/shubham-acharya-3a5a9b423` |
+| `NEXT_PUBLIC_RESUME_URL` | Resume PDF path or external URL | `/Shubham_Acharya_Resume.pdf` |
+| `NEXT_PUBLIC_PROFILE_IMAGE` | Profile Image path or external URL | `/profile_picture.png` |
+| `NEXT_PUBLIC_NEXUS_AI_GITHUB_URL` | Nexus AI GitHub repository | `https://github.com/shubhamacharya77/Nexus_AI_Backend` |
+| `NEXT_PUBLIC_NEXUS_AI_LIVE_URL` | Nexus AI Live demo URL | `https://nexus-ai-frontend-nine.vercel.app/` |
+| `NEXT_PUBLIC_PREPMATE_AI_GITHUB_URL` | PrepMate AI GitHub repository | `https://github.com/shubhamacharya77/Prepmate-AI-backend` |
+| `NEXT_PUBLIC_PREPMATE_AI_LIVE_URL` | PrepMate AI Live demo URL | `https://prepmate-ai-frontend.vercel.app/` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌐 Deploying to Vercel
+
+1. Push your code to GitHub / GitLab / Bitbucket.
+2. Import the repository in [Vercel](https://vercel.com/new).
+3. Navigate to **Project Settings** ➔ **Environment Variables**.
+4. Add any environment variables from the table above (or `.env.example`) to customize links or details without changing code.
+5. Click **Deploy**!

@@ -15,14 +15,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const name = process.env.NEXT_PUBLIC_NAME || "Shubham Acharya";
+const title = process.env.NEXT_PUBLIC_TITLE || "AI Backend Developer";
+const description =
+  process.env.NEXT_PUBLIC_DESCRIPTION ||
+  "Portfolio of Shubham Acharya, AI Backend Developer specializing in Agentic AI applications, FastAPI, LangGraph workflow orchestration, RAG systems, and production backend architecture.";
+const profileImage = process.env.NEXT_PUBLIC_PROFILE_IMAGE || "/profile_picture.png";
+
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000"
-  ),
-  title: "Shubham Acharya | AI Backend Developer & Agentic AI Engineer",
-  description: "Portfolio of Shubham Acharya, AI Backend Developer specializing in Agentic AI applications, FastAPI, LangGraph workflow orchestration, RAG systems, and production backend architecture.",
+  metadataBase: new URL(baseUrl),
+  title: `${name} | ${title} & Agentic AI Engineer`,
+  description: description,
   icons: {
     icon: getAssetPath("/favicon.svg"),
     shortcut: getAssetPath("/favicon.svg"),
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI Backend Developer",
     "Agentic AI Engineer",
-    "Shubham Acharya",
+    name,
     "Python",
     "FastAPI",
     "LangGraph",
@@ -40,27 +47,27 @@ export const metadata: Metadata = {
     "Vector Databases",
     "Backend Engineer"
   ],
-  authors: [{ name: "Shubham Acharya" }],
+  authors: [{ name: name }],
   openGraph: {
-    title: "Shubham Acharya — AI Backend Developer",
-    description: "Building Production-Ready AI Backend Systems using Python, FastAPI, LangGraph, and LLMs.",
+    title: `${name} — ${title}`,
+    description: description,
     type: "website",
     locale: "en_US",
-    siteName: "Shubham Acharya Portfolio",
+    siteName: `${name} Portfolio`,
     images: [
       {
-        url: getAssetPath("/profile_picture.png"),
+        url: getAssetPath(profileImage),
         width: 800,
         height: 800,
-        alt: "Shubham Acharya",
+        alt: name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shubham Acharya — AI Backend Developer",
-    description: "Building Agentic AI Applications & Production Backend Systems.",
-    images: [getAssetPath("/profile_picture.png")],
+    title: `${name} — ${title}`,
+    description: description,
+    images: [getAssetPath(profileImage)],
   },
   robots: {
     index: true,

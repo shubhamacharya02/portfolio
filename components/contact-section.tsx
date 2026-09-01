@@ -96,7 +96,9 @@ export function ContactSection() {
                 <LinkedInIcon className="w-5 h-5" />
               </div>
               <h3 className="text-base font-heading font-bold text-white mb-1">LinkedIn Profile</h3>
-              <p className="text-xs font-mono text-zinc-400 mb-4">/in/shubham-acharya</p>
+              <p className="text-xs font-mono text-zinc-400 mb-4 truncate">
+                {PERSONAL_INFO.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com/, "") || "/in/profile"}
+              </p>
             </div>
 
             <div className="flex items-center justify-between text-xs font-mono text-indigo-400 font-semibold group-hover:text-indigo-300">
@@ -121,7 +123,9 @@ export function ContactSection() {
                 <GitHubIcon className="w-5 h-5" />
               </div>
               <h3 className="text-base font-heading font-bold text-white mb-1">GitHub Repositories</h3>
-              <p className="text-xs font-mono text-zinc-400 mb-4">@shubham-acharya</p>
+              <p className="text-xs font-mono text-zinc-400 mb-4 truncate">
+                @{process.env.NEXT_PUBLIC_GITHUB_USERNAME || PERSONAL_INFO.github.split("/").filter(Boolean).pop() || "shubhamacharya77"}
+              </p>
             </div>
 
             <div className="flex items-center justify-between text-xs font-mono text-indigo-400 font-semibold group-hover:text-indigo-300">

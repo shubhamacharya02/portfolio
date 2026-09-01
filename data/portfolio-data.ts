@@ -50,17 +50,17 @@ export interface TimelineItem {
 import { getAssetPath } from "@/lib/utils";
 
 export const PERSONAL_INFO = {
-  name: "Shubham Acharya",
-  title: "AI Backend Developer",
-  roleHeadline: "Building Production-Ready AI Backend Systems",
-  subtitle: "Agentic AI • LLM Workflows • FastAPI • LangGraph",
-  description: "I build scalable AI applications that orchestrate LLMs, workflow automation, and backend services using modern AI infrastructure.",
-  location: "Bengaluru, India",
-  email: "shubhamacharya258@gmail.com",
-  github: "https://github.com/shubhamacharya77",
-  linkedin: "https://www.linkedin.com/in/shubham-acharya-3a5a9b423",
-  profileImage: getAssetPath("/profile_picture.png"),
-  resumePdf: getAssetPath("/Shubham_Acharya_Resume.pdf"),
+  name: process.env.NEXT_PUBLIC_NAME || "Shubham Acharya",
+  title: process.env.NEXT_PUBLIC_TITLE || "AI Backend Developer",
+  roleHeadline: process.env.NEXT_PUBLIC_ROLE_HEADLINE || "Building Production-Ready AI Backend Systems",
+  subtitle: process.env.NEXT_PUBLIC_SUBTITLE || "Agentic AI • LLM Workflows • FastAPI • LangGraph",
+  description: process.env.NEXT_PUBLIC_DESCRIPTION || "I build scalable AI applications that orchestrate LLMs, workflow automation, and backend services using modern AI infrastructure.",
+  location: process.env.NEXT_PUBLIC_LOCATION || "Bengaluru, India",
+  email: process.env.NEXT_PUBLIC_EMAIL || "shubhamacharya258@gmail.com",
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/shubhamacharya77",
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/shubham-acharya-3a5a9b423",
+  profileImage: getAssetPath(process.env.NEXT_PUBLIC_PROFILE_IMAGE || "/profile_picture.png"),
+  resumePdf: getAssetPath(process.env.NEXT_PUBLIC_RESUME_URL || "/Shubham_Acharya_Resume.pdf"),
   coreTechStack: [
     "Python",
     "FastAPI",
@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
     heroTagline: "Visual AI Workflows & Automated Insight Engine",
     category: "Agentic AI",
     isFeatured: true,
-    image: getAssetPath("/nexus-ai-preview.png"),
+    image: getAssetPath(process.env.NEXT_PUBLIC_NEXUS_AI_IMAGE || "/nexus-ai-preview.png"),
     overview: "Build visual AI workflows that analyze documents, extract insights, and generate reports — all in a single, unified workspace. No code required.",
     problem: "Building custom multi-step AI agent pipelines traditionally required writing complex custom boilerplate Python scripts for state management, tool routing, and streaming output back to the web client.",
     solution: "Designed a modular backend architecture powered by LangGraph state machines and FastAPI. Users construct workflow graphs visually on the frontend, which are converted into stateful executable graphs on the server.",
@@ -271,8 +271,8 @@ async def execute_workflow(payload: WorkflowRunRequest):
       "Designing non-blocking async Python WebSocket architectures for streaming AI output.",
       "Translating visual flow graphs into deterministic backend execution trees."
     ],
-    githubUrl: "https://github.com/shubhamacharya77/Nexus_AI_Backend",
-    liveUrl: "https://nexus-ai-frontend-nine.vercel.app/"
+    githubUrl: process.env.NEXT_PUBLIC_NEXUS_AI_GITHUB_URL || "https://github.com/shubhamacharya77/Nexus_AI_Backend",
+    liveUrl: process.env.NEXT_PUBLIC_NEXUS_AI_LIVE_URL || "https://nexus-ai-frontend-nine.vercel.app/"
   },
   {
     id: "prepmate-ai",
@@ -281,7 +281,7 @@ async def execute_workflow(payload: WorkflowRunRequest):
     heroTagline: "AI Career Roadmap & Mock Interview Platform",
     category: "RAG & LLMs",
     isFeatured: true,
-    image: getAssetPath("/prepmate-ai-preview.png"),
+    image: getAssetPath(process.env.NEXT_PUBLIC_PREPMATE_AI_IMAGE || "/prepmate-ai-preview.png"),
     overview: "Get a personalized career roadmap, discover matched job opportunities, and practice interviews with AI — all in one place.",
     problem: "Generic AI chatbots lack specific context about a candidate's actual projects, code background, or resume structure, leading to generic interview questions.",
     solution: "Engineered a Retrieval-Augmented Generation (RAG) backend. Resumes are parsed into text chunks, embedded via sentence transformers, stored in ChromaDB, and retrieved dynamically during candidate Q&A.",
@@ -333,8 +333,8 @@ async def generate_interview_question(request: CopilotRequest):
       "Optimizing vector database retrieval accuracy with metadata filtering.",
       "Structuring RAG prompts to strictly adhere to retrieved context."
     ],
-    githubUrl: "https://github.com/shubhamacharya77/Prepmate-AI-backend",
-    liveUrl: "https://prepmate-ai-frontend.vercel.app/"
+    githubUrl: process.env.NEXT_PUBLIC_PREPMATE_AI_GITHUB_URL || "https://github.com/shubhamacharya77/Prepmate-AI-backend",
+    liveUrl: process.env.NEXT_PUBLIC_PREPMATE_AI_LIVE_URL || "https://prepmate-ai-frontend.vercel.app/"
   }
 ];
 
