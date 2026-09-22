@@ -124,7 +124,7 @@ export function ContactSection() {
               </div>
               <h3 className="text-base font-heading font-bold text-white mb-1">GitHub Repositories</h3>
               <p className="text-xs font-mono text-zinc-400 mb-4 truncate">
-                @{process.env.NEXT_PUBLIC_GITHUB_USERNAME || PERSONAL_INFO.github.split("/").filter(Boolean).pop() || "shubhamacharya77"}
+                @{process.env.NEXT_PUBLIC_GITHUB_USERNAME || PERSONAL_INFO.github.split("/").filter(Boolean).pop() || "shubhamacharya02"}
               </p>
             </div>
 

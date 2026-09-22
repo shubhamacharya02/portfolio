@@ -57,7 +57,7 @@ export const PERSONAL_INFO = {
   description: process.env.NEXT_PUBLIC_DESCRIPTION || "I build scalable AI applications that orchestrate LLMs, workflow automation, and backend services using modern AI infrastructure.",
   location: process.env.NEXT_PUBLIC_LOCATION || "Bengaluru, India",
   email: process.env.NEXT_PUBLIC_EMAIL || "shubhamacharya258@gmail.com",
-  github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/shubhamacharya77",
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/shubhamacharya02",
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/shubham-acharya-3a5a9b423",
   profileImage: getAssetPath(process.env.NEXT_PUBLIC_PROFILE_IMAGE || "/profile_picture.png"),
   resumePdf: getAssetPath(process.env.NEXT_PUBLIC_RESUME_URL || "/Shubham_Acharya_Resume.pdf"),
@@ -271,7 +271,7 @@ async def execute_workflow(payload: WorkflowRunRequest):
       "Designing non-blocking async Python WebSocket architectures for streaming AI output.",
       "Translating visual flow graphs into deterministic backend execution trees."
     ],
-    githubUrl: process.env.NEXT_PUBLIC_NEXUS_AI_GITHUB_URL || "https://github.com/shubhamacharya77/Nexus_AI_Backend",
+    githubUrl: process.env.NEXT_PUBLIC_NEXUS_AI_GITHUB_URL || "https://github.com/shubhamacharya02/Nexus_AI_Backend",
     liveUrl: process.env.NEXT_PUBLIC_NEXUS_AI_LIVE_URL || "https://nexus-ai-frontend-nine.vercel.app/"
   },
   {
@@ -333,7 +333,7 @@ async def generate_interview_question(request: CopilotRequest):
       "Optimizing vector database retrieval accuracy with metadata filtering.",
       "Structuring RAG prompts to strictly adhere to retrieved context."
     ],
-    githubUrl: process.env.NEXT_PUBLIC_PREPMATE_AI_GITHUB_URL || "https://github.com/shubhamacharya77/Prepmate-AI-backend",
+    githubUrl: process.env.NEXT_PUBLIC_PREPMATE_AI_GITHUB_URL || "https://github.com/shubhamacharya02/Prepmate-AI-backend",
     liveUrl: process.env.NEXT_PUBLIC_PREPMATE_AI_LIVE_URL || "https://prepmate-ai-frontend.vercel.app/"
   }
 ];

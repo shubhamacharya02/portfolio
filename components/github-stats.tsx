@@ -25,7 +25,7 @@ export function GitHubStats() {
   const username =
     process.env.NEXT_PUBLIC_GITHUB_USERNAME ||
     PERSONAL_INFO.github.split("/").filter(Boolean).pop() ||
-    "shubhamacharya77";
+    "shubhamacharya02";
 
   useEffect(() => {
     async function fetchGitHubData() {
